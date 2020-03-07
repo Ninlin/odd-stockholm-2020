@@ -1,11 +1,12 @@
 #### Install & load packages ----
-require('dplyr')
-require('stringr')
-require('httr')
-require('jsonlite')
-require('osmdata')
-require('rvest')
-require('xml2')
+#install.packages('dplyr')
+#install.packages('stringr')
+#install.packages('httr')
+#install.packages('jsonlite')
+#install.packages('osmdata')
+#install.packages('rvest')
+#install.packages('xml2')
+
 
 library(dplyr) # data manipulation
 library(stringr) # operations with strings
