@@ -6,14 +6,15 @@
 #install.packages('osmdata')
 #install.packages('rvest')
 #install.packages('xml2')
-
+#install.packages('magrittr')
 
 library(dplyr) # data manipulation
 library(stringr) # operations with strings
+library(magrittr) # for piping
 
 #### Getting data from an API -----
-library(httr) 
-library(jsonlite)
+library(httr) # for sending API requests
+library(jsonlite) # for working with json files
 
 # 1. Build a request 
 path <- 'https://catalog.sodertalje.se/rowstore/dataset/bd34bf56-8ebe-427a-8e8d-0a126f481f33'
@@ -112,7 +113,7 @@ points <- schools$osm_polygons %>%
         data.frame()
 
 #### Web Scraping -----
-library(rvest)  
+library(rvest) 
 library(xml2)
 
 page <- 'https://www.hitta.se/grundskolor+s%C3%B6dert%C3%A4lje/f%C3%B6retag/2'
